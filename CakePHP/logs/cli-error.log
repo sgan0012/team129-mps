@@ -1,0 +1,160 @@
+2020-09-16 05:34:08 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pluu0001.agreement,' doesn't exist in C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'agreement,', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('agreement,', Array)
+#2 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('agreement,')
+#3 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'agreement,', 'Agreement,')
+#7 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Agreement,')
+#8 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Agreement,')
+#9 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Agreement,', 0)
+#10 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('agreement,', 'department,facu...')
+#12 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Users\cklsd\FIT3047\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pluu0001.agreement,' doesn't exist in C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 37
+Stack Trace:
+#0 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'agreement,', Array, Object(Cake\Database\Schema\TableSchema))
+#11 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('agreement,', Array)
+#12 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('agreement,')
+#13 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#15 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#16 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'agreement,', 'Agreement,')
+#17 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Agreement,')
+#18 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Agreement,')
+#19 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Agreement,', 0)
+#20 C:\Users\cklsd\FIT3047\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#21 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('agreement,', 'department,facu...')
+#22 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#23 C:\Users\cklsd\FIT3047\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#24 C:\Users\cklsd\FIT3047\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#25 {main}
+
+
+2021-03-28 10:35:46 Error: [PDOException] SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ in G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'u20s2129_team12...', 'team129BackEnd', Array)
+#1 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#9 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#10 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#11 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('users')
+#12 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#14 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 G:\3047\2021.3.28\CakePHP\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2021-03-28 10:39:47 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u20s2129_backend_setup.users' doesn't exist in G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#1 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('users', Array)
+#2 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('users')
+#3 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#7 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#8 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\ModelTask->main('users')
+#9 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#11 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 G:\3047\2021.3.28\CakePHP\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u20s2129_backend_setup.users' doesn't exist in G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 37
+Stack Trace:
+#0 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#11 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('users', Array)
+#12 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('users')
+#13 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#15 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#16 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#17 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#18 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\ModelTask->main('users')
+#19 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#20 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 G:\3047\2021.3.28\CakePHP\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2021-03-28 10:40:40 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u20s2129_backend_setup.users' doesn't exist in G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#1 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('users', Array)
+#2 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('users')
+#3 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('users')
+#7 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#9 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 G:\3047\2021.3.28\CakePHP\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u20s2129_backend_setup.users' doesn't exist in G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 37
+Stack Trace:
+#0 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#11 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('users', Array)
+#12 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('users')
+#13 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#15 G:\3047\2021.3.28\CakePHP\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#16 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('users')
+#17 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#19 G:\3047\2021.3.28\CakePHP\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 G:\3047\2021.3.28\CakePHP\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
